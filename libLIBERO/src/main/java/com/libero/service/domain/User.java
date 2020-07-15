@@ -1,9 +1,11 @@
 package com.libero.service.domain;
 
+import lombok.Data;
+
+@Data
 public class User {
 
-	public User() {
-		// TODO Auto-generated constructor stub
-	}
+	private String userId;
+	private String password;
 
 }
