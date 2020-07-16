@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+		PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="PublishMapper">
+
+	<resultMap id="publishSelectMap" type="publish">
+		<result property="prodNo" 		column="prod_no" 			jdbcType="INTEGER"/>
+		<result property="prodType"		column="prod_type" 			jdbcType="VARCHAR" />
+		<result property="password" 	column="password" 			jdbcType="VARCHAR" />
+		<result property="role" 		column="role" 				jdbcType="VARCHAR" />
+		<result property="ssn" 			column="ssn" 				jdbcType="VARCHAR" />
+		<result property="phone" 		column="cell_phone" 		jdbcType="VARCHAR" />
+		<result property="addr" 		column="addr" 				jdbcType="VARCHAR" />
+		<result property="email" 		column="email" 				jdbcType="VARCHAR"  />
+		<result property="regDate" 		column="reg_date" 			jdbcType="DATE" />
+	</resultMap>
+
+</mapper>
+ 	

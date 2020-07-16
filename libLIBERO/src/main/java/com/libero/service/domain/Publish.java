@@ -7,16 +7,8 @@ import lombok.Data;
 @Data
 public class Publish {
 	
-	private String prodType;
-	private int prodNo;
-	private String prodName;
-	private String prodDetail;
 	private String author;
 	private int printPrice;
-	private int retailPrice;
-	private String blindCode;
-	private String prodThumbnail;
-	private String coverFile;
 	private String purposeCode;
 	private String manuFile;
 	private String discountCode;
