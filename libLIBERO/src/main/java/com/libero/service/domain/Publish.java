@@ -1,9 +1,11 @@
 package com.libero.service.domain;
 
+import java.io.Serializable;
+
 import lombok.Data;
 
 @Data
-public class Publish {
+public class Publish implements Serializable {
 	
 	private String author;
 	private int printPrice;
