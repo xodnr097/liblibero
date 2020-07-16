@@ -59,6 +59,38 @@ INSERT INTO `user` (`user_id`, `password`, `nickname`, `gender_code`, `name`, `a
 	('user02', '0202', '유저02', 'f', '유저02', NULL, '010-0202-0202', 0, 1, 'u', '2020-07-15 16:55:56', NULL, 'bf', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 
+-- 테이블 liblibero.product 구조 내보내기
+DROP TABLE IF EXISTS `product`;
+CREATE TABLE IF NOT EXISTS `product` (
+  `prod_no` int(11) NOT NULL AUTO_INCREMENT,
+  `prod_type` varchar(10) NOT NULL,
+  `prod_name` varchar(50) NOT NULL,
+  `prod_detail` text,
+  `retail_price` int(11) NOT NULL,
+  `print_price` int(11) DEFAULT NULL,
+  `author` varchar(20) DEFAULT NULL,
+  `blind_code` char(1) NOT NULL DEFAULT 'o',
+  `prod_thumbnail` varchar(50) NOT NULL,
+  `cover_file` varchar(50) DEFAULT NULL,
+  `purpose_code` char(4) DEFAULT NULL,
+  `manu_file` varchar(50) DEFAULT NULL,
+  `reg_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `discount_code` char(1) NOT NULL,
+  `book_page` int(3) DEFAULT NULL,
+  `size_type` char(2) DEFAULT NULL,
+  `color_type` char(5) DEFAULT NULL,
+  `cover_type` char(4) DEFAULT NULL,
+  `inner_type` char(5) DEFAULT NULL,
+  `factory_id` varchar(30) DEFAULT NULL,
+  `creator` varchar(30) NOT NULL,
+  `like_count` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`prod_no`),
+  KEY `FK_product_user` (`factory_id`),
+  KEY `FK_product_user_2` (`creator`),
+  CONSTRAINT `FK_product_user` FOREIGN KEY (`factory_id`) REFERENCES `user` (`user_id`),
+  CONSTRAINT `FK_product_user_2` FOREIGN KEY (`creator`) REFERENCES `user` (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10024 DEFAULT CHARSET=utf8;
+
 -- 테이블 데이터 liblibero.product:~24 rows (대략적) 내보내기
 DELETE FROM `product`;
 /*!40000 ALTER TABLE `product` DISABLE KEYS */;
@@ -289,37 +321,6 @@ INSERT INTO `post` (`post_no`, `post_type`, `user_id`, `post_name`, `post_conten
 	(10007, 'Q', 'user01', 'A5 사이즈 컬러내지 책 최소 페이지', '문의드립니다.\r\n\r\n\r\n\r\nA5 판형 컬러내지 책의 최소 페이지는 어느 정도인지 알고 싶습니다.\r\n\r\n제본에 무리가 없으려면 어느 정도 페이지여야 할까요?\r\n\r\n\r\n\r\n수고에 감사드립니다.', '2020-07-15 17:49:08', 'o', 0, 0, 'P', 'X');
 /*!40000 ALTER TABLE `post` ENABLE KEYS */;
 
--- 테이블 liblibero.product 구조 내보내기
-DROP TABLE IF EXISTS `product`;
-CREATE TABLE IF NOT EXISTS `product` (
-  `prod_no` int(11) NOT NULL AUTO_INCREMENT,
-  `prod_type` varchar(10) NOT NULL,
-  `prod_name` varchar(50) NOT NULL,
-  `prod_detail` text,
-  `retail_price` int(11) NOT NULL,
-  `print_price` int(11) DEFAULT NULL,
-  `author` varchar(20) DEFAULT NULL,
-  `blind_code` char(1) NOT NULL DEFAULT 'o',
-  `prod_thumbnail` varchar(50) NOT NULL,
-  `cover_file` varchar(50) DEFAULT NULL,
-  `purpose_code` char(4) DEFAULT NULL,
-  `manu_file` varchar(50) DEFAULT NULL,
-  `reg_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `discount_code` char(1) NOT NULL,
-  `book_page` int(3) DEFAULT NULL,
-  `size_type` char(2) DEFAULT NULL,
-  `color_type` char(5) DEFAULT NULL,
-  `cover_type` char(4) DEFAULT NULL,
-  `inner_type` char(5) DEFAULT NULL,
-  `factory_id` varchar(30) DEFAULT NULL,
-  `creator` varchar(30) NOT NULL,
-  `like_count` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`prod_no`),
-  KEY `FK_product_user` (`factory_id`),
-  KEY `FK_product_user_2` (`creator`),
-  CONSTRAINT `FK_product_user` FOREIGN KEY (`factory_id`) REFERENCES `user` (`user_id`),
-  CONSTRAINT `FK_product_user_2` FOREIGN KEY (`creator`) REFERENCES `user` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10024 DEFAULT CHARSET=utf8;
 
 
 -- 테이블 liblibero.report 구조 내보내기
