@@ -8,11 +8,27 @@
  	
  	
 	<resultMap id="buySelectMapper" type="buy">
-		
+		<result property="buyNo" column="buy_no" jdbcType="INTEGER"/>
+		<result property="buyAmount" column="buy_amount" jdbcType="INTEGER"/>
+		<result property="user.buyerId" column="user_id" jdbcType="VARCHAR"/>
+		<result property="product.prodNo" column="prod_no" jdbcType="INTEGER"/>
+		<result property="buyStatus" column="buy_code" jdbcType="SMALLINT"/>
 <!--   		<association property="buyer" column="userId" javaType="com.model2.mvc.service.domain.User" select="getUserId"/> -->
 <!--   		<association property="PurchaseProd" column="prodNo" javaType="com.model2.mvc.service.domain.Product" select="getProdNo"/> -->
 	</resultMap>
 	
+	<resultMap id="paySelectMapper" type="buy">
+		<result property="payNo" column="pay_no" jdbcType="INTEGER"/>
+		<result property="deliveryRequest" column="delivery_req" jdbcType="VARCHAR"/>
+		<result property="paymentOption" column="payment_type" jdbcType="CHAR"/>
+		<result property="deliveryStatus" column="delivery_code" jdbcType="SMALLINT"/>
+		<result property="receiverName" column="receiver_name" jdbcType="VARCHAR"/>
+		<result property="receiverAddr" column="receiver_addr" jdbcType="VARCHAR"/>
+		<result property="receiverPhone" column="receiver_phone" jdbcType="VARCHAR"/>
+		<result property="actualPrice" column="actual_price" jdbcType="INTEGER"/>
+		<result property="cancelReason" column="#" jdbcType="VARCHAR"/>
+		<result property="payDate" column="pay_date" jdbcType="VARCHAR"/>
+	</resultMap>
 	
 	
 </mapper>
