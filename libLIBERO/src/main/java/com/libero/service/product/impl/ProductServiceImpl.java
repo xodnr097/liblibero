@@ -1,5 +1,6 @@
 package com.libero.service.product.impl;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -9,16 +10,17 @@ import org.springframework.stereotype.Service;
 
 import com.libero.common.Search;
 import com.libero.service.domain.Product;
+import com.libero.service.product.ProductDAO;
 import com.libero.service.product.ProductService;
 
 @Service("prouctServiceImpl")
 public class ProductServiceImpl implements ProductService{
 
 	@Autowired
-	@Qualifier("productDaoImpl")
-	private ProductDao productDao;
-	public void setProductDao(ProductDao productDao) {
-					this.productDao = productDao;
+	@Qualifier("productDAOImpl")
+	private ProductDAO productDAO;
+	public void setProductDao(ProductDAO productDAO) {
+					this.productDAO = productDAO;
 	}
 	
 	
@@ -29,17 +31,15 @@ public class ProductServiceImpl implements ProductService{
 	}
 
 	///Method
-	
-	
 	@Override
-	public Map<String, Object> getProductList(Search search) throws Exception {
+	public Map<String, Object> getBookList(Search search) throws Exception {
 		// TODO Auto-generated method stub
-		List<Product> list= productDao.getProductList(search);
-		int totalCount = productDao.getTotalCount(search);
+		List<Product> list= productDAO.getBookList(search);
+		//int totalCount = productDAO.getTotalCount(search);
 		
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("list", list);
-		map.put("totalCount", new Integer(totalCount));
+		//map.put("totalCount", new Integer(totalCount));
 		return map;
 	}
 

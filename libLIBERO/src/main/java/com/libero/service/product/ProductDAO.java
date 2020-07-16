@@ -1,9 +1,15 @@
 package com.libero.service.product;
 
-public class ProductDAO {
+import java.util.List;
 
-	public ProductDAO() {
-		// TODO Auto-generated constructor stub
-	}
+import com.libero.common.Search;
+import com.libero.service.domain.Product;
 
+public interface ProductDAO {
+
+	//public Product getProduct(int prodNo) throws Exception;
+	
+	public List<Product> getBookList(Search search) throws Exception;
+	
+	
 }
