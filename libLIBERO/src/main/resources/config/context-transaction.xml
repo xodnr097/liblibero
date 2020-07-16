@@ -58,5 +58,4 @@
 									expression="execution(* com.libero.service..*Impl.*(..) )" />
 		<aop:advisor 	advice-ref="txAdvice"  pointcut-ref="requiredTx"  />
 	</aop:config>
-
 </beans>
