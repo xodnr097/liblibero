@@ -1,8 +1,8 @@
 package com.libero.service.domain;
 
-public class Order {
+public class Buy {
 
-	public Order() {
+	public Buy() {
 		// TODO Auto-generated constructor stub
 	}
 
