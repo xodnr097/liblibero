@@ -138,6 +138,12 @@ CREATE TABLE IF NOT EXISTS `buy` (
 
 -- 테이블 데이터 liblibero.buy:~0 rows (대략적) 내보내기
 DELETE FROM `buy`;
+INSERT INTO `buy` (`buy_no`,`prod_no`,`user_id`,`buy_amount`,`buy_code`) VALUES
+	
+	(10001,10001,'user01',2,0),
+	(10002,10000,'user01',3,0),
+	(10003,10000,'user02',10,0),
+	(10004,10005,'wjddbstp95@gmail.com',1000,0);
 /*!40000 ALTER TABLE `buy` DISABLE KEYS */;
 /*!40000 ALTER TABLE `buy` ENABLE KEYS */;
 
@@ -285,6 +291,11 @@ CREATE TABLE IF NOT EXISTS `pay` (
 
 -- 테이블 데이터 liblibero.pay:~0 rows (대략적) 내보내기
 DELETE FROM `pay`;
+INSERT INTO `pay`(`pay_no`,`user_id`,`payment_type`,`actual_price`,`receiver_name`,`receiver_addr`,`receiver_phone`,`delivery_req`,`pay_date`,`delivery_code`) VALUES
+(10000,'user01','c',10000,'정윤세','경기도 용인시 수지구 풍덕 고등 학교','010-0000-1100','으',now(),'2'),
+(10001,'user02','c',100000,'유저01','집','123-1234-1234','힘들다',now(),'1'),
+(10002,'wjddbstp95@gmail.com','c',13000000,'수령자이름','문앞','123-1234-1234','ㅇㅇ',now(),'1'),
+(10003,'user01','c',56000,'정윤세','경기도 용인시','010-0000-0011','빠른 배송',now(),'1');
 /*!40000 ALTER TABLE `pay` DISABLE KEYS */;
 /*!40000 ALTER TABLE `pay` ENABLE KEYS */;
 

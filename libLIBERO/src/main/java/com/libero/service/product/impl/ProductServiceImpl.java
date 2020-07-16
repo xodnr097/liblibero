@@ -1,27 +1,19 @@
 package com.libero.service.product.impl;
 
-import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import com.libero.common.Search;
-import com.libero.service.domain.Product;
-import com.libero.service.product.ProductDAO;
 import com.libero.service.product.ProductService;
 
 @Service("prouctServiceImpl")
 public class ProductServiceImpl implements ProductService{
 
-	@Autowired
-	@Qualifier("productDAOImpl")
-	private ProductDAO productDAO;
-	public void setProductDao(ProductDAO productDAO) {
-					this.productDAO = productDAO;
-	}
+//	@Autowired
+//	@Qualifier("productDAOImpl")
+//	private ProductDAO productDAO;
 	
 	
 	///Constructor
@@ -34,13 +26,7 @@ public class ProductServiceImpl implements ProductService{
 	@Override
 	public Map<String, Object> getBookList(Search search) throws Exception {
 		// TODO Auto-generated method stub
-		List<Product> list= productDAO.getBookList(search);
-		//int totalCount = productDAO.getTotalCount(search);
-		
-		Map<String, Object> map = new HashMap<String, Object>();
-		map.put("list", list);
-		//map.put("totalCount", new Integer(totalCount));
-		return map;
+		return null;
 	}
 
 }
