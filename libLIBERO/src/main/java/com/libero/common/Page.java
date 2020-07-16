@@ -1,8 +1,8 @@
 package com.libero.common;
 
-public class page {
+public class Page {
 
-	public page() {
+	public Page() {
 		// TODO Auto-generated constructor stub
 	}
 
