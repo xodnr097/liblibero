@@ -24,21 +24,6 @@ public class ProductController{
 	}
 	
 	//method
-	@RequestMapping(value="getBookList", method = RequestMethod.GET)
-	public ModelAndView getBookList() throws Exception {
-		System.out.println("/product/getBookList:GET");
-		
-		ModelAndView modelAndView = new ModelAndView();
-		modelAndView.setViewName("forward:/product/getBookList.jsp");
-		
-	}
-	
-}
-
-public class ProductController {
-
-	public ProductController() {
-		// TODO Auto-generated constructor stub
-	}
 
 }
+
