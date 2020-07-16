@@ -32,18 +32,18 @@ public class PublishController {
 		System.out.println("/publish/selectProdType : GET");
 		
 		ModelAndView modelAndView = new ModelAndView();
-		modelAndView.setViewName("forward:/publish/selectProductType.jsp");
+		modelAndView.setViewName("forward:/view/publish/selectProductType.jsp");
 		
 		return modelAndView;
 	}
 	
-	@RequestMapping(value = "addPrintOption", method = RequestMethod.GET)
-	public ModelAndView addPrintOption(HttpSession session) throws Exception {
+	@RequestMapping(value = "addPrintOption/{prodType}", method = RequestMethod.GET)
+	public ModelAndView addPrintOption(HttpSession session, String prodType) throws Exception {
 		
 		System.out.println("/publish/addPrintOption : GET");
 		
 		ModelAndView modelAndView = new ModelAndView();
-		modelAndView.setViewName("forward:/publish/addPrintOption.jsp");
+		modelAndView.setViewName("forward:/view/publish/addPrintOption.jsp");
 		
 		return modelAndView;
 	}
