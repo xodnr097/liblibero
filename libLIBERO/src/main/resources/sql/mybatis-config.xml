@@ -22,6 +22,7 @@
 		<typeAlias alias="comment" 	type="com.libero.service.domain.Comment" />
 		<typeAlias alias="report" 	type="com.libero.service.domain.Report" />
 		<typeAlias alias="review" 	type="com.libero.service.domain.Review" />
+		<typeAlias alias="search" 	type="com.libero.common.Search" />
 	</typeAliases>
 	 <!-- SQL Definition :: file include -->
 	<mappers>
