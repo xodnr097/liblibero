@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>Insert title here</title>
+<title>상품 형태 선택</title>
 </head>
 <body>
-
+상품 형태 선택창
 </body>
 </html>
