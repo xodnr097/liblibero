@@ -8,13 +8,51 @@
  	
  	
 	<!-- <resultMap id="productSelectMap" type="product">
-		<result property="prodNo" 		column="prod_no" 			jdbcType="VARCHAR"/>
+		<result property="prodNo" 		column="prod_no" 			jdbcType="VARCHAR" />
+		<result property="prodType" 	column="prod_type" 			jdbcType="VARCHAR" />
 		<result property="prodName"		column="prod_name" 			jdbcType="VARCHAR" />
-		<result property="prodDetail" 	column="prod_detail" 		jdbcType="VARCHAR" />
-		<result property="manuDate" 	column="manufacture_day" 	jdbcType="VARCHAR" />
-		<result property="price" 		column="price" 				jdbcType="VARCHAR" />
-		<result property="fileName" 	column="image_file" 		jdbcType="VARCHAR" />
-		<result property="regDate" 		column="reg_date" 			jdbcType="VARCHAR" />
+		<result property="prodDetail" 	column="prod_detail" 		jdbcType="TEXT" />
+		<result property="retailPrice" 	column="retail_price" 		jdbcType="INT" />
+		<result property="blindCode" 	column="blind_code" 		jdbcType="CHAR" />
+		<result property="prodThumbnail" column="prod_thumbnail" 	jdbcType="VARCHAR" />
+		<result property="coverFile" 	column="cover_file" 		jdbcType="VARCHAR" />
+		<result property="purposeCode" 	column="purpose_Code" 		jdbcType="CHAR" />
+		<result property="manuFile"		column="manu_File"			jdbcType="CHAR" />
+		<result property="regDate"		column="reg_Date"			jdbcType="TIMESTAMP" />
+		<result property="discountCode"	 column="discount_code"		jdbcType="CHAR" />
+		<result property="bookPage"			column="manu_File"			jdbcType="CHAR" />
+		<result property="
 	</resultMap> -->
 	 
 </mapper>
+
+
+	private int prodNo;
+	private String prodType;
+	private String prodName;
+	private String prodDetail;
+	private int retailPrice;
+	//private User userId
+	private String blindCode;
+	private String prod_thumbnail;
+	private String coverFile;
+	private Date regDate;
+	private String discountCode;
+	private String creator;
+	private int salesCount;
+	private int likeCount;
+	private Publish printOption;
+	
+	
+	private String author;
+	private int printPrice;
+	private String purposeCode;
+	private String manuFile;
+	private String discountCode;
+	private int bookPage;
+	private String colorType;
+	private String sizeType;
+	private String coverType;
+	private String innerType;
+	private int tempCode;
+	private User factoryId;

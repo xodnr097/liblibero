@@ -1,9 +1,37 @@
 package com.libero.service.domain;
 
-public class Product {
+import java.sql.Date;
 
-	public Product() {
-		// TODO Auto-generated constructor stub
-	}
+import lombok.Data;
+
+@Data
+public class Product {
+	
+	private int prodNo;
+	private String prodType;
+	private String prodName;
+	private String prodDetail;
+	private int retailPrice;
+	//private User userId
+	private int printPrice;
+	private String blindCode;
+	private String prod_thumbnail;
+	private String coverFile;
+	private Date regDate;
+	private String discountCode;
+	private String creator;
+	private int salesCount;
+	private int likeCount;
+	private Publish printOption;
+	private String author;
+	private String purposeCode;
+	private String manuFile;
+	private int bookPage;
+	private String colorType;
+	private String sizeType;
+	private String coverType;
+	private String innerType;
+	private int tempCode;
+	private User factoryId;
 
 }
