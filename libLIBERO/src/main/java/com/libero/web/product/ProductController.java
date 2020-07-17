@@ -1,5 +1,7 @@
 package com.libero.web.product;
 
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
@@ -28,6 +30,10 @@ public class ProductController{
 	public ModelAndView getBookList() throws Exception {
 		
 			System.out.println("/product/getBookList : GET");
+			
+			//BusinessLogic
+			
+			Map<String, Object> map=productService.getBookList();
 			
 			ModelAndView modelAndView = new ModelAndView();
 			modelAndView.setViewName("forward:/view/product/getBookList.jsp");

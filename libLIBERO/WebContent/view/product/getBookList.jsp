@@ -8,5 +8,22 @@
 </head>
 <body>
 
+
+
+
+	<tbody>
+			<c:forEach var="prod" items="${list}">
+					<td align="left"> title="Click : 상품정보 확인">
+							<p class="hidden">${prod.prodNo}</p>
+							${prod.prodName}
+					</td>
+					
+			</c:forEach>
+	
+	
+	
+	</tbody>
+
+
 </body>
 </html>
