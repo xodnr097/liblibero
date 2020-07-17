@@ -32,10 +32,11 @@ public class ProductController{
 			System.out.println("/product/getBookList : GET");
 			
 			//BusinessLogic
-			
+			System.out.println("1");
 			Map<String, Object> map=productService.getBookList();
-			
+			System.out.println("2");
 			ModelAndView modelAndView = new ModelAndView();
+			modelAndView.addObject("book", map.get("list"));
 			modelAndView.setViewName("forward:/view/product/getBookList.jsp");
 			
 			return modelAndView;

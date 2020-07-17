@@ -1,28 +1,28 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
 
-
-
-
-	<tbody>
-			<c:forEach var="prod" items="${list}">
-					<td align="left"> title="Click : »óÇ°Á¤º¸ È®ÀÎ">
-							<p class="hidden">${prod.prodNo}</p>
-							${prod.prodName}
-					</td>
-					
-			</c:forEach>
-	
-	
-	
-	</tbody>
+<tbody>
+		
+		  <c:set var="i" value="0" />
+		  <c:forEach var="book" items="${book}">
+			<c:set var="i" value="${ i+1 }" />
+			<tr>
+				<td align="center">${ i }</td>
+				<td align="left"  title="Click : ì£¼ë¬¸ì •ë³´ í™•ì¸">
+				
+					${book.prodName}
+				</td>
+          </c:forEach>
+        
+        </tbody>
 
 
 </body>
