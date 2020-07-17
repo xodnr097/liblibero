@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.libero.service.publish.PublishService;
@@ -37,13 +38,24 @@ public class PublishController {
 		return modelAndView;
 	}
 	
-	@RequestMapping(value = "addPrintOption/{prodType}", method = RequestMethod.GET)
-	public ModelAndView addPrintOption(HttpSession session, String prodType) throws Exception {
+	@RequestMapping(value = "addPrintOption", method = RequestMethod.GET)
+	public ModelAndView addPrintOption(HttpSession session, @RequestParam("prodType") String prodType) throws Exception {
 		
 		System.out.println("/publish/addPrintOption : GET");
 		
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.setViewName("forward:/view/publish/addPrintOption.jsp");
+		
+		return modelAndView;
+	}
+	
+	@RequestMapping(value = "addManu/{prodNo}", method = RequestMethod.GET)
+	public ModelAndView addPrintOption(HttpSession session, int prodNo) throws Exception {
+		
+		System.out.println("/publish/addManu : GET");
+		
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.setViewName("forward:/view/publish/addManu.jsp");
 		
 		return modelAndView;
 	}

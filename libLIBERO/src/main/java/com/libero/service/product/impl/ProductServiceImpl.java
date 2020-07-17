@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import com.libero.common.Search;
 import com.libero.service.product.ProductService;
 
-@Service("prouctServiceImpl")
+@Service("productServiceImpl")
 public class ProductServiceImpl implements ProductService{
 
 //	@Autowired
